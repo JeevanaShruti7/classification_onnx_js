@@ -2,14 +2,24 @@
 <html>
 <head>
   <meta charset="UTF-8" />
-  <title>ONNX Model Demo</title>
+  <title>Student Performance Classification</title>
   <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/onnxruntime-web.min.js"></script>
   <script src="app.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; }
+    input { width: 400px; padding: 5px; }
+    button { padding: 5px 10px; margin-left: 10px; }
+    #output { margin-top: 20px; font-weight: bold; }
+  </style>
 </head>
 <body>
-  <h2>Model Inference using ONNX Runtime Web</h2>
-  <input id="inputData" placeholder="Enter comma-separated numbers">
+  <h2>Student Performance Classification</h2>
+  <p>Enter feature values as comma-separated numbers:</p>
+  <input id="inputData" placeholder="e.g. 1,0,2,3,...">
   <button onclick="runModel()">Run Prediction</button>
   <p id="output"></p>
+
+  <h3>Confusion Matrix</h3>
+  <img src="confusion_matrix.png" alt="Confusion Matrix" width="400">
 </body>
 </html>
