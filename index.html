@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Performance Classification</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+  <script src="app.js"></script>
+
+  <style>
+    body { font-family: Arial; margin:30px; }
+    input { width:380px; padding:6px; }
+    button { padding:6px 10px; }
+  </style>
+</head>
+<body>
+
+<h2>Student Performance Classification</h2>
+<input id="inputData" placeholder="Enter comma separated values">
+<button onclick="runModel()">Predict</button>
+
+<p id="output"></p>
+
+<h3>Confusion Matrix</h3>
+<img src="confusion_matrix.png" width="350"/>
+
+</body>
+</html>
